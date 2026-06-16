@@ -6,7 +6,6 @@ import FeaturesSection from "./components/FeaturesSection";
 import ProductShowcase from "./components/ProductShowcase";
 import HowItWorks from "./components/HowItWorks";
 import CTASection from "./components/CTASection";
-import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -21,7 +20,6 @@ export default function Home() {
         <ProductShowcase />
         <HowItWorks />
         <CTASection />
-        <ContactSection />
       </main>
       <Footer />
     </>

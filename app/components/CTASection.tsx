@@ -1,18 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
-import { CalendarCheck } from "lucide-react";
-import { useState } from "react";
+import { CalendarCheck, MessageCircle } from "lucide-react";
+
+const WHATSAPP_NUMBER = "+60 14-886 8674";
+const WHATSAPP_LINK = "https://wa.me/60148868674?text=Hi%20Liquid%20Logic%2C%20I%20would%20like%20to%20book%20my%2014%20day%20free%20trial.";
 
 export default function CTASection() {
-  const [email, setEmail] = useState("");
-  const [sent, setSent] = useState(false);
-
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-    setSent(true);
-  };
-
   return (
     <section id="trial" className="relative py-24">
       <div className="mx-auto max-w-4xl px-6 text-center">
@@ -37,34 +30,19 @@ export default function CTASection() {
               Experience 15-second pours and see the savings firsthand.
             </p>
 
-            {!sent ? (
-              <form
-                onSubmit={onSubmit}
-                className="mx-auto flex max-w-md flex-col sm:flex-row items-center gap-3"
-              >
-                <input
-                  type="email"
-                  required
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full flex-1 rounded-full bg-background border border-black/10 px-5 py-3 text-sm text-foreground placeholder:text-muted outline-none focus:border-accent/30 transition-colors"
-                />
-                <button
-                  type="submit"
-                  className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white hover:bg-accent/90 transition-colors whitespace-nowrap"
-                >
-                  Book Free Trial
-                </button>
-              </form>
-            ) : (
-              <div className="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 px-5 py-3 text-sm font-medium text-emerald-700">
-                You are booked — we will contact you within 24 hours.
-              </div>
-            )}
+            <a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-6 py-3 text-sm font-semibold text-white hover:bg-emerald-700 transition-colors shadow-sm"
+            >
+              <MessageCircle className="h-4 w-4" />
+              Book Free Trial via WhatsApp
+            </a>
 
             <p className="text-xs text-muted mt-4">
-              No commitment. Free installation support included.
+              Message us on {WHATSAPP_NUMBER}. No commitment. Free installation
+              support included.
             </p>
           </div>
         </motion.div>

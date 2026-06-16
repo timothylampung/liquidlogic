@@ -1,6 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import { Play } from "lucide-react";
+import { Play, MessageCircle } from "lucide-react";
+
+const WHATSAPP_LINK = "https://wa.me/60148868674?text=Hi%20Liquid%20Logic%2C%20I%20would%20like%20to%20book%20my%2014%20day%20free%20trial.";
 
 export default function HeroSection() {
   return (
@@ -36,9 +38,12 @@ export default function HeroSection() {
 
             <div className="flex flex-wrap items-center gap-4">
               <a
-                href="#trial"
-                className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white hover:bg-accent/90 transition-colors shadow-sm"
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-6 py-3 text-sm font-semibold text-white hover:bg-emerald-700 transition-colors shadow-sm"
               >
+                <MessageCircle className="h-4 w-4" />
                 BOOK YOUR 14 Day Free Trial
               </a>
               <a
@@ -54,9 +59,9 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
+            className="relative flex justify-center lg:justify-end"
           >
-            <div className="relative aspect-video rounded-3xl overflow-hidden chrome-border bg-surface-light border border-black/5 shadow-lg">
+            <div className="relative w-full md:max-w-xs aspect-[9/16] rounded-3xl overflow-hidden chrome-border bg-surface-light border border-black/5 shadow-xl">
               <video
                 className="h-full w-full object-cover"
                 src="/videos/Liquid%20Logic.mp4"

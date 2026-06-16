@@ -7,7 +7,6 @@ const links = [
   { label: "Why Us", href: "#why-us" },
   { label: "Pricing", href: "#pricing" },
   { label: "Demo", href: "#demo" },
-  { label: "Contact", href: "#contact" },
 ];
 
 function Logo() {
