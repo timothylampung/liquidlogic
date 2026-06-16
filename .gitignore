@@ -1,0 +1,30 @@
+# Dependencies
+/node_modules
+
+# Next.js
+/.next/
+/out/
+/build
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug
+npm-debug.log*
+
+# Env
+.env*
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Legacy artifacts
+/_empty/
+/liquid-logic/
+/write_files.py
+/fix_root.py
